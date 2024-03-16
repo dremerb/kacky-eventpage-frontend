@@ -14,8 +14,8 @@ jobs:
         with:
           node-version: lts/iron
           cache: 'npm'
-      - name: Dev dependencies
-        run: npm install eslint prettier
+      - name: Install dependencies
+        run: npm install --only=dev
       - name: Check eslint
         run: npm run lint
       - name: Check prettier
